@@ -1,0 +1,171 @@
+/* Base styles */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  /* Hero image is stored at the root of the repository because folders cannot be uploaded via GitHub's web interface */
+  background-image: url('hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.band-name {
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: #f0f0f0;
+  margin-top: 0.5em;
+}
+
+/* Navigation */
+.navbar {
+  background: #1a1a1a;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffc107;
+}
+
+/* Sections */
+.content-section {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-grid figure {
+  flex: 1 1 calc(50% - 20px);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  text-align: center;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Videos */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  background: #1a1a1a;
+  color: #aaa;
+  font-size: 0.85rem;
+}
